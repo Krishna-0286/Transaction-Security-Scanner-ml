@@ -16,7 +16,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     try:
-        model = joblib.load("models/fraud_hgb_model.pkl")
+        model = joblib.load("fraud_hgb_model.pkl")
         return model
     except FileNotFoundError:
         st.error("Model file not found. Please ensure 'models/fraud_hgb_model.pkl' exists.")
