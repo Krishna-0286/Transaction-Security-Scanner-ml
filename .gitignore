@@ -1,0 +1,17 @@
+ 
+data/*.xlsx
+data/*.parquet
+
+
+ 
+# Ignore datasets
+*.csv
+
+# Ignore ML Models
+*.pkl
+
+# Ignore Jupyter and Python environment junk
+.ipynb_checkpoints/
+__pycache__/
+venv/
+anaconda_projects/
