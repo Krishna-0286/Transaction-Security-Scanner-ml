@@ -1,4 +1,4 @@
- 
+#ignore
 data/*.xlsx
 data/*.parquet
 
@@ -8,7 +8,7 @@ data/*.parquet
 *.csv
 
 # Ignore ML Models
-.pkl
+
 
 # Ignore Jupyter and Python environment junk
 .ipynb_checkpoints/
