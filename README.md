@@ -113,41 +113,10 @@ Each was scored on Accuracy, Precision, Recall, F1, ROC-AUC, and PR-AUC.
 ### 5. Final Model
 
 `HistGradientBoostingClassifier`, trained on the full dataset, chosen for its speed on large tabular data and its performance in the comparison above. `class_weight='balanced'` was deliberately **not** used in the final model, to avoid over-penalizing precision — a false positive here means blocking a real customer's legitimate transaction.
-
-## Results
-
-> Fill in with your actual numbers after running the notebook.
-
-**Algorithm comparison (stratified sample, test split held out):**
-
-| Model | Resampling | Accuracy | Precision | Recall | F1 | ROC-AUC | PR-AUC |
-|---|---|---|---|---|---|---|---|
-| Logistic Regression | No SMOTE | | | | | | |
-| Logistic Regression | SMOTE | | | | | | |
-| Random Forest | No SMOTE | | | | | | |
-| Random Forest | SMOTE | | | | | | |
-| XGBoost | No SMOTE | | | | | | |
-| XGBoost | SMOTE | | | | | | |
-| HistGradientBoosting | No SMOTE | | | | | | |
-| HistGradientBoosting | SMOTE | | | | | | |
-
-**Final production model (full dataset):**
-
-| Metric | Score |
-|---|---|
-| Precision | |
-| Recall | |
-| F1 | |
-| ROC-AUC | |
-| PR-AUC | |
-
-## Key Findings
-
 - Accuracy is not a meaningful metric under ~0.13% fraud — a model predicting "no fraud" for everything already scores ~99.87%. PR-AUC is the primary metric used for model selection.
 - Fraud in this dataset only occurs in `TRANSFER` and `CASH_OUT` transactions.
 - `errorBalanceOrig` / `errorBalanceDest` are strong, engineered fraud signals.
-- SMOTE's effect on the models: *(summarize your actual before/after numbers here — typically a recall gain with some precision trade-off)*.
-
+ 
 ## Installation
 
 ```bash
@@ -175,13 +144,7 @@ Run all cells in order. The final trained model is saved to `models/fraud_hgb_mo
 - Matplotlib, Seaborn
 - Jupyter Notebook
 
-## Future Work
-
-- Time-based (temporal) train/test split to better reflect deployment conditions and evaluate robustness to concept drift
-- Account-level aggregate and velocity features (e.g. transaction frequency per account)
-- Model explainability with SHAP for per-transaction fraud reasoning
-- Real-time scoring API and drift-monitoring pipeline
-
+ 
 ## License
 
 This project is for educational purposes. Dataset licensed by its original authors on Kaggle. 
