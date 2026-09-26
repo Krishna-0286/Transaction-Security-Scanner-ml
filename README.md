@@ -14,8 +14,6 @@ A machine learning pipeline that detects fraudulent mobile-money transactions on
   - [4. Model Comparison](#4-model-comparison)
   - [5. Final Model](#5-final-model)
 - [Results](#results)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Tech Stack](#tech-stack)
 - [License](#license)
 
@@ -115,24 +113,8 @@ Each was scored on Accuracy, Precision, Recall, F1, ROC-AUC, and PR-AUC.
 - Fraud in this dataset only occurs in `TRANSFER` and `CASH_OUT` transactions.
 - `errorBalanceOrig` / `errorBalanceDest` are strong, engineered fraud signals.
  
-## Installation
-
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-pip install -r requirements.txt
-```
-
-Download `Fraud.csv` from the [Kaggle dataset page](https://www.kaggle.com/datasets/ealaxi/paysim1) and place it in the project root.
-
-## Usage
-
-```bash
-jupyter notebook fraud_detection.ipynb
-```
-
-Run all cells in order. The final trained model is saved to `models/fraud_hgb_model.pkl`.
-
+ 
+ 
 ## Tech Stack
 
 - Python, pandas, NumPy
