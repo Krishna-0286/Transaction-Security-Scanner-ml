@@ -14,11 +14,9 @@ A machine learning pipeline that detects fraudulent mobile-money transactions on
   - [4. Model Comparison](#4-model-comparison)
   - [5. Final Model](#5-final-model)
 - [Results](#results)
-- [Key Findings](#key-findings)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tech Stack](#tech-stack)
-  
 - [License](#license)
 
 ## Overview
